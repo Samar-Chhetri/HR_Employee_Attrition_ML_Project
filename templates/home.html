@@ -1,0 +1,310 @@
+<html lang="en">
+<body>
+    <div class="login">
+        <h1> Employee Attrition Prediction (HR Department)</h1>
+
+        <form action="{{ url_for('predict_attrition')}}" method="post">
+            <h2>
+                <legend> Employee Attrition</legend>
+            </h2>
+
+            <div class="mb-3">
+                <label class="form-label">BusinessTravel</label>
+                <select class="form-control" name="BusinessTravel" placeholer="Enter BusinessTravel Frequency" required>
+                    <option class="placeholder" selected disabled value=""> Select BusinessTravel Frequency</option>
+                    <option value="Travel_Rarely">
+                        Travel_Rarely
+                    </option>
+                    <option value="Travel_Frequently">
+                        Travel_Frequently
+                    </option>
+                    <option value="Non-Travel">
+                        Non-Travel
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">DailyRate</label>
+                <input class="form-control" type ="number" name="DailyRate" placeholer="Enter DailyRate" min="100" max="1500" required/>
+            
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <select class="form-control" name="Department" placeholer="Enter Department" required>
+                    <option class="placeholder" selected disabled value=""> Select Department</option>
+                    <option value="Research & Development">
+                        Research & Development
+                    </option>
+                    <option value="Sales">
+                        Sales
+                    </option>
+                    <option value="Human Resources">
+                        Human Resources
+                    </option>
+                </select>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">DistanceFromHome</label>
+                <input class="form-control" type ="number" name="DistanceFromHome" placeholer="Enter DistanceFromHome" min="1" max="30" required/>
+            
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Education</label>
+                <input class="form-control" type ="number" name="Education" placeholer="Enter Education" min="1" max="5" required/>
+            
+            </div>
+
+
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">EducationField</label>
+                <select class="form-control" name="EducationField" placeholer="Enter EducationField" required>
+                    <option class="placeholder" selected disabled value=""> Select EducationField</option>
+                    <option value="Life Sciences">
+                        Life Sciences
+                    </option>
+                    <option value="Medical">
+                        Medical
+                    </option>
+                    <option value="Marketing">
+                        Marketing
+                    </option>
+                    <option value="Technical Degree">
+                        Technical Degree
+                    </option>
+                    <option value="Human Resources">
+                        Human Resources
+                    </option>
+                    <option value="Other">
+                        Other
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">EnvironmentSatisfaction</label>
+                <input class="form-control" type ="number" name="EnvironmentSatisfaction" placeholer="Enter EnvironmentSatisfaction" min="1" max="4" required/>
+        
+            </div>
+
+
+    
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <select class="form-control" name="Gender" placeholer="Enter Gender" required>
+                    <option class="placeholder" selected disabled value=""> Select Gender</option>
+                    <option value="Male">
+                        Male
+                    </option>
+                    <option value="Female">
+                        Female
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">HourlyRate</label>
+                <input class="form-control" type ="number" name="HourlyRate" placeholer="Enter HourlyRate" min="30" max="100" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">JobInvolvement</label>
+                <input class="form-control" type ="number" name="JobInvolvement" placeholer="Enter JobInvolvement" min="1" max="30" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">JobLevel</label>
+                <input class="form-control" type ="number" name="JobLevel" placeholer="Enter JobLevel" min="1" max="5" required/>
+            </div>
+
+
+
+
+            <div class="mb-3">
+                <label class="form-label">JobRole</label>
+                <select class="form-control" name="JobRole" placeholer="Enter JobRole" required>
+                    <option class="placeholder" selected disabled value=""> Select JobRole</option>
+                    <option value="Sales Executive">
+                        Sales Executive
+                    </option>
+                    <option value="Research Scientist">
+                        Research Scientist
+                    </option>
+                    <option value="Laboratory Technician">
+                        Laboratory Technician
+                    </option>
+                    <option value="Manufacturing Director">
+                        Manufacturing Director
+                    </option>
+                    <option value="Healthcare Representative">
+                        Healthcare Representative
+                    </option>
+                    <option value="Manager">
+                        Manager
+                    </option>
+                    <option value="Sales Representative">
+                        Sales Representative
+                    </option>
+                    <option value="Research Director">
+                        Research Director
+                    </option>
+                    <option value="Human Resources">
+                        Human Resources
+                    </option>
+                </select>
+            </div>
+
+    
+    
+            <div class="mb-3">
+                <label class="form-label">JobSatisfaction</label>
+                <input class="form-control" type ="number" name="JobSatisfaction" placeholer="Enter JobSatisfaction" min="1" max="4" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">MaritalStatus</label>
+                <select class="form-control" name="MaritalStatus" placeholer="MaritalStatus" required>
+                    <option class="placeholder" selected disabled value=""> Select MaritalStatus</option>
+                    <option value="Single">
+                        Single
+                    </option>
+                    <option value="Married">
+                        Married
+                    </option>
+                    <option value="Divorced">
+                        Divorced
+                    </option>
+                </select>
+            </div>
+
+
+
+        
+            <div class="mb-3">
+                <label class="form-label">MonthlyIncome</label>
+                <input class="form-control" type ="number" name="MonthlyIncome" placeholer="Enter MonthlyIncome" min="1000" max="20000" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">MonthlyRate</label>
+                <input class="form-control" type ="number" name="MonthlyRate" placeholer="Enter MonthlyRate" min="2000" max="30000" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">NumCompaniesWorked</label>
+                <input class="form-control" type ="number" name="NumCompaniesWorked" placeholer="Enter NumCompaniesWorked" min="0" max="9" required/>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label">OverTime</label>
+                <select class="form-control" name="OverTime" placeholer="OverTime" required>
+                    <option class="placeholder" selected disabled value=""> Select OverTime</option>
+                    <option value="No">
+                        No
+                    </option>
+                    <option value="Yes">
+                        Yes
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">PercentSalaryHike</label>
+                <input class="form-control" type ="number" name="PercentSalaryHike" placeholer="Enter PercentSalaryHike" min="10" max="25" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">PerformanceRating</label>
+                <input class="form-control" type ="number" name="PerformanceRating" placeholer="Enter PerformanceRating" min="3" max="4" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">RelationshipSatisfaction</label>
+                <input class="form-control" type ="number" name="RelationshipSatisfaction" placeholer="Enter RelationshipSatisfaction" min="1" max="4" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">StockOptionLevel</label>
+                <input class="form-control" type ="number" name="StockOptionLevel" placeholer="Enter StockOptionLevel" min="0" max="3" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">TotalWorkingYears</label>
+                <input class="form-control" type ="number" name="TotalWorkingYears" placeholer="Enter TotalWorkingYears" min="0" max="40" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">TrainingTimesLastYear</label>
+                <input class="form-control" type ="number" name="TrainingTimesLastYear" placeholer="TrainingTimesLastYear" min="0" max="6" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">WorkLifeBalance</label>
+                <input class="form-control" type ="number" name="WorkLifeBalance" placeholer="WorkLifeBalance" min="1" max="4" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">YearsAtCompany</label>
+                <input class="form-control" type ="number" name="YearsAtCompany" placeholer="YearsAtCompany" min="0" max="40" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">YearsInCurrentRole</label>
+                <input class="form-control" type ="number" name="YearsInCurrentRole" placeholer="YearsInCurrentRole" min="0" max="18" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">YearsSinceLastPromotion</label>
+                <input class="form-control" type ="number" name="YearsSinceLastPromotion" placeholer="YearsSinceLastPromotion" min="0" max="15" required/>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">YearsWithCurrManager</label>
+                <input class="form-control" type ="number" name="YearsWithCurrManager" placeholer="YearsWithCurrManager" min="0" max="18" required/>
+            </div>
+
+
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type ="submit" value="Predict Employee Attrition" required />
+            </div>
+
+
+        </form>
+
+        <h2>
+            Result : The prediction of Employee Attrition is  {{results}} 
+        </h2>
+
+    </body>
+</html>

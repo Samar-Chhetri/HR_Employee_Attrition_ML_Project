@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 from dataclasses import dataclass
 
-from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
@@ -36,7 +35,6 @@ class ModelTrainer:
             )
 
             models = {
-                "Logistic Regression": LogisticRegression(),
                 "Decision Tree": DecisionTreeClassifier(),
                 "Random Forest": RandomForestClassifier(),
                 "AdaBoost Classifier": AdaBoostClassifier(),
@@ -44,6 +42,8 @@ class ModelTrainer:
                 "Support Vector Classifier": SVC(),
                 "K-nearest Classifier": KNeighborsClassifier()
             }
+
+
 
             model_report:dict = evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, models=models)
 
