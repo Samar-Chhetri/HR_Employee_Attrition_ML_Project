@@ -58,7 +58,14 @@ def predict_attrition():
 
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
-        return render_template('home.html', results = results[0])
+
+        results = results[0]
+        if results == 0.0:
+            results = 'The employee will stay in the company.'
+        else:
+            results = 'The employee will leave the company.'
+            
+        return render_template('home.html', results = results)
     
 
 if __name__ == "__main__":
