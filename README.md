@@ -3,7 +3,17 @@
 The key to success in any organization is attracting and retaining top talent. As an HR analyst one of the key task is to determine which factors keep employees at the company and which prompt others to leave. Given in the data is a set of data points on the employees who are either currently working within the company or have resigned. The objective is to identify and improve these factors to prevent loss of good people
 
 ## Theme of the project
-The company wants to predict the Employee Attrition (in advance) based data he has. These details relating to employees including top to low level are used for the prediction.
+The company wants to predict the Employee Attrition (in advance) based on data he has. These details relating to employees including top to low level are used for the prediction.
+
+### Deployment Figure
+
+##### Before :
+![employee_attrition](https://github.com/Samar-Chhetri/HR_Employee_Attrition_ML_Project/assets/122675013/0433df38-4377-4647-8f2d-8bdd223ffd20)
+
+##### Prediction :
+![attrition_1](https://github.com/Samar-Chhetri/HR_Employee_Attrition_ML_Project/assets/122675013/25aead51-bc62-4780-b873-fd69d48948c0)
+
+
 
 
 
