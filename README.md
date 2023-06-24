@@ -11,7 +11,8 @@ The company wants to predict the Employee Attrition (in advance) based on data h
 ![employee_attrition](https://github.com/Samar-Chhetri/HR_Employee_Attrition_ML_Project/assets/122675013/0433df38-4377-4647-8f2d-8bdd223ffd20)
 
 ##### Prediction :
-![attrition_1](https://github.com/Samar-Chhetri/HR_Employee_Attrition_ML_Project/assets/122675013/25aead51-bc62-4780-b873-fd69d48948c0)
+![attrition_2](https://github.com/Samar-Chhetri/HR_Employee_Attrition_ML_Project/assets/122675013/8612982b-356e-487c-9947-95923340346b)
+
 
 
 
